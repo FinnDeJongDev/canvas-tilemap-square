@@ -9,7 +9,6 @@ const mapSettings = {
   },
   rows: 28,
   columns: 14,
-  tileMap: []
 }
 
 function App() {
