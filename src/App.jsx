@@ -59,13 +59,13 @@ function App() {
 
 function drawGrid(ref) {
   const ctx = ref.current.getContext('2d');
-  for (let a = 0; a < mapSettings.rows; a++) {
-    for (let b = 0; b < mapSettings.columns; b++) {
-      let tile = mapSettings.getTile(a, b)
+  for (let x = 0; x < mapSettings.rows; x++) {
+    for (let y = 0; y < mapSettings.columns; y++) {
+      let tile = mapSettings.getTile(x, y)
       ctx.strokeStyle = "black";
       ctx.strokeRect(
-        mapSettings.tile.width * a,
-        mapSettings.tile.height * b,
+        mapSettings.tile.width * x,
+        mapSettings.tile.height * y,
         mapSettings.tile.width,
         mapSettings.tile.height
       )
@@ -73,8 +73,8 @@ function drawGrid(ref) {
       if (tile === 1) {
         ctx.fillStyle = "black";
         ctx.fillRect(
-          mapSettings.tile.width * a,
-          mapSettings.tile.height * b,
+          mapSettings.tile.width * x,
+          mapSettings.tile.height * y,
           mapSettings.tile.width,
           mapSettings.tile.height
         )
